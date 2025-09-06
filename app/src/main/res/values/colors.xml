@@ -2,4 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="app_background">#FFFFFFFF</color>
+    <color name="card_background">#F2FAFC</color>
+    <color name="colorPrimary">#004D40</color>
+    <color name="colorPrimaryText">#FF000000</color>
+    <color name="colorSecondaryText">#555555</color>
+    <color name="colorOnPrimary">#FFFFFFFF</color>
 </resources>
