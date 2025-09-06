@@ -7,9 +7,9 @@ Aplicación móvil para Android que permite a los usuarios descubrir y realizar 
 
 ## 👥 Integrantes:
 
-- Tomás Marcelo Pugente (@TomasPugente)
-- Dante Zulli (@DanteZulli)
-- Franco Sebastian Romay (@FranSeba)
+- Tomás Marcelo Pugente ([TomasPugente](https://github.com/TomasPugente))
+- Dante Zulli ([DanteZulli](https://github.com/DanteZulli))
+- Franco Sebastian Romay ([FranSeba](https://github.com/FranSeba))
 
 ### Funcionalidades Implementadas:
 
