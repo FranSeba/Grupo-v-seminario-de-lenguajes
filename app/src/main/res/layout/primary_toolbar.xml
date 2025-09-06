@@ -1,0 +1,13 @@
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    app:title="@string/toolbar_titulo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorOnPrimary"
+    android:elevation="8dp"
+    android:layout_marginBottom="10dp"
+    app:navigationIcon="@drawable/ic_baseline_sports_esports_24"
+    app:menu="@menu/menu_main">
+</androidx.appcompat.widget.Toolbar>
