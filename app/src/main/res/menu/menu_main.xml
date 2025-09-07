@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_session_options"
+        android:title="@string/cuenta"
+        android:icon="@drawable/baseline_person_24"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/action_logout"
+                android:title="@string/logout"
+                app:showAsAction="never">
+            </item>
+        </menu>
+    </item>
+
+</menu>
