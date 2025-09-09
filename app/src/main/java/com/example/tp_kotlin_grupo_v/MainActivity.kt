@@ -43,11 +43,16 @@ class MainActivity : AppCompatActivity() {
     private fun getGiveaways(): MutableList<Giveaway> {
         var giveaways: MutableList<Giveaway> = ArrayList()
         giveaways.add(Giveaway(1, "Cyberpunk 2077", "(GOG)", "Juego", "Gratis", "3 días", "15.2k", "ic_game_placeholder_1"))
-        giveaways.add(Giveaway(2, "The Witcher 3: Wild Hunt - Expansion Pass", "(Steam)", "DLC", "$9.99", "10 días", "25.8k", "ic_game_placeholder_2"))
+        giveaways.add(Giveaway(2, "The Witcher 3", "(Steam)", "DLC", "$9.99", "10 días", "25.8k", "ic_game_placeholder_2"))
+        giveaways.add(Giveaway(3, "Stardew Valley", "(Steam)", "Juego", "Gratis", "7 días", "50.1k", "ic_game_placeholder_3"))
+        giveaways.add(Giveaway(1, "Cyberpunk 2077", "(GOG)", "Juego", "Gratis", "3 días", "15.2k", "ic_game_placeholder_1"))
+        giveaways.add(Giveaway(2, "The Witcher 3", "(Steam)", "DLC", "$9.99", "10 días", "25.8k", "ic_game_placeholder_2"))
+        giveaways.add(Giveaway(3, "Stardew Valley", "(Steam)", "Juego", "Gratis", "7 días", "50.1k", "ic_game_placeholder_3"))
+        giveaways.add(Giveaway(1, "Cyberpunk 2077", "(GOG)", "Juego", "Gratis", "3 días", "15.2k", "ic_game_placeholder_1"))
+        giveaways.add(Giveaway(2, "The Witcher 3", "(Steam)", "DLC", "$9.99", "10 días", "25.8k", "ic_game_placeholder_2"))
         giveaways.add(Giveaway(3, "Stardew Valley", "(Steam)", "Juego", "Gratis", "7 días", "50.1k", "ic_game_placeholder_3"))
         return giveaways
     }
-
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)

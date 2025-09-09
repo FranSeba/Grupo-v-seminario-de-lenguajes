@@ -10,22 +10,18 @@
     tools:context=".MainActivity">
 
     <!-- CardView para la Toolbar -->
+
+    <!-- Card Resumen: Total activos, Esta semana, Valor total -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="@color/card_background"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="4dp">
+        android:elevation="0dp">
 
         <include
             android:id="@+id/toolbar"
-            layout="@layout/primary_toolbar"/>
+            layout="@layout/primary_toolbar" />
     </androidx.cardview.widget.CardView>
 
-    <!-- Card Resumen: Total activos, Esta semana, Valor total -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

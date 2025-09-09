@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TPKotlingrupov">
         <activity
-            android:name=".DetailsGiveAway"
+            android:name=".GiveawayDetailActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

@@ -47,13 +47,10 @@ class GiveawayAdapter(var giveaways: MutableList<Giveaway>, var context: Context
         holder.txtDias.text = item.diasRestantes
         holder.txtCantidadPersonas.text = item.cantidadPersonas
         //holder.imgGame.setImageResource(item.imagenPlaceholder)
-
-//        holder.itemView.setOnClickListener( View.OnClickListener {
-//            val intent = Intent(context, DetailActivity::class.java)
-//            intent.putExtra("id", item.id)
-//            context.startActivity(intent) }
-//        )
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, GiveawayDetailActivity::class.java)
+            context.startActivity(intent)
+        }
     }
 
 }
-
