@@ -4,14 +4,23 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.appbar.MaterialToolbar
 
 class GiveawayDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContentView(R.layout.activity_details_give_away)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
         val toolbar: MaterialToolbar = findViewById(R.id.toolbar_secondary)
         setSupportActionBar(toolbar)
@@ -19,12 +28,8 @@ class GiveawayDetailActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
-        // El título ya se establece en el XML a través de app:title
-        // Si necesitaras cambiarlo dinámicamente, podrías hacerlo así:
-        // supportActionBar?.title = "Detalles del Giveaway"
-
         toolbar.setNavigationOnClickListener {
-            onBackPressedDispatcher.onBackPressed() // O simplemente finish() si no hay lógica de back stack compleja
+            onBackPressedDispatcher.onBackPressed()
         }
 
         val imgGiveaway: ImageView = findViewById(R.id.imgGiveaway)
