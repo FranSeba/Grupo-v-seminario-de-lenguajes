@@ -10,17 +10,7 @@
     tools:context=".MainActivity">
 
     <!-- CardView para la Toolbar -->
-
-    <!-- Card Resumen: Total activos, Esta semana, Valor total -->
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:elevation="0dp">
-
-        <include
-            android:id="@+id/toolbar"
-            layout="@layout/primary_toolbar" />
-    </androidx.cardview.widget.CardView>
+    <include android:id="@+id/toolbar" layout="@layout/primary_toolbar" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

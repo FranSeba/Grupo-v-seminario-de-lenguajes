@@ -1,186 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:orientation="vertical">
 
-    <LinearLayout
+    <include layout="@layout/secondary_toolbar" />
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-        <ImageView
-            android:id="@+id/imgGiveaway"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:background="#E0E0E0"
-            android:scaleType="centerCrop" />
-
-        <TextView
-            android:id="@+id/tvTitulo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Epic Games Store - Rocket League"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:paddingTop="12dp"
-            android:paddingBottom="4dp"
-            android:textColor="#000000"/>
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/imgGiveaway"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="#E0E0E0"
+                android:scaleType="centerCrop" />
 
             <TextView
-                android:id="@+id/tvValor"
+                android:id="@+id/tvTitulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Valor: $19.99"
-                android:padding="6dp"
-                android:background="@color/colorPrimary"
-                android:textColor="#FFFFFF"/>
+                android:text="Epic Games Store - Rocket League"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingTop="12dp"
+                android:paddingBottom="4dp"
+                android:textColor="#000000"/>
 
-            <TextView
-                android:id="@+id/tvEstado"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Activo"
-                android:padding="6dp"
-                android:layout_marginStart="8dp"
-                android:background="@color/colorPrimary"
-                android:textColor="#FFFFFF"/>
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvValor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Valor: $19.99"
+                    android:padding="6dp"
+                    android:background="@color/colorPrimary"
+                    android:textColor="#FFFFFF"/>
+
+                <TextView
+                    android:id="@+id/tvEstado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Activo"
+                    android:padding="6dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/colorPrimary"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/card_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="Publicado: 15 de enero de 2024"
+                        android:textColor="#333333"
+                        android:paddingBottom="6dp"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"/>
+
+                    <TextView
+                        android:text="Termina: 31 de diciembre de 2024"
+                        android:textColor="#333333"
+                        android:paddingBottom="6dp"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"/>
+
+                    <TextView
+                        android:text="Participantes: 12,500"
+                        android:textColor="#333333"
+                        android:paddingBottom="6dp"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"/>
+
+                    <TextView
+                        android:text="Plataformas: PC, Epic Games"
+                        android:textColor="#333333"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/card_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:text="Descripción"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:paddingBottom="6dp"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        />
+
+                    <TextView
+                        android:text="Claim Rocket League for free on Epic Games Store! High-powered hybrid of arcade-style soccer and vehicular mayhem."
+                        android:textColor="#333333"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/card_background"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:text="Instrucciones"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:paddingBottom="6dp"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        />
+
+                    <TextView android:text="1. Visit Epic Games Store"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"/>
+                    <TextView android:text="2. Login to your account"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"/>
+                    <TextView android:text="3. Click 'Get' on Rocket League"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"/>
+                    <TextView android:text="4. Confirm your purchase"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <Button
+                android:id="@+id/btnReclamar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reclamar Giveaway"
+                android:textAllCaps="false"
+                android:backgroundTint="#0A8754"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="20dp"/>
         </LinearLayout>
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="4dp"
-            app:cardBackgroundColor="@color/card_background">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="12dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:text="Publicado: 15 de enero de 2024"
-                    android:textColor="#333333"
-                    android:paddingBottom="6dp"
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"/>
-
-                <TextView
-                    android:text="Termina: 31 de diciembre de 2024"
-                    android:textColor="#333333"
-                    android:paddingBottom="6dp"
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"/>
-
-                <TextView
-                    android:text="Participantes: 12,500"
-                    android:textColor="#333333"
-                    android:paddingBottom="6dp"
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"/>
-
-                <TextView
-                    android:text="Plataformas: PC, Epic Games"
-                    android:textColor="#333333"
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"
-                    />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="4dp"
-            app:cardBackgroundColor="@color/card_background">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="12dp">
-
-                <TextView
-                    android:text="Descripción"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:paddingBottom="6dp"
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"
-                    />
-
-                <TextView
-                    android:text="Claim Rocket League for free on Epic Games Store! High-powered hybrid of arcade-style soccer and vehicular mayhem."
-                    android:textColor="#333333"
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"
-                    />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="4dp"
-            app:cardBackgroundColor="@color/card_background"
-            >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="12dp">
-
-                <TextView
-                    android:text="Instrucciones"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:paddingBottom="6dp"
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"
-                    />
-
-                <TextView android:text="1. Visit Epic Games Store"
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"/>
-                <TextView android:text="2. Login to your account"
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"/>
-                <TextView android:text="3. Click 'Get' on Rocket League"
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"/>
-                <TextView android:text="4. Confirm your purchase"
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-
-        <Button
-            android:id="@+id/btnReclamar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Reclamar Giveaway"
-            android:textAllCaps="false"
-            android:backgroundTint="#0A8754"
-            android:textColor="#FFFFFF"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="20dp"/>
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+</LinearLayout>
