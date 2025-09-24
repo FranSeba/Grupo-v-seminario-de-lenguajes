@@ -25,6 +25,9 @@ interface UserDao {
     @Query("select * from user_entity where username= :username")
     suspend fun getUserByUsername(username: String): User?
 
+    @Query("SELECT * FROM user_entity WHERE email = :email")
+    suspend fun getUserByEmail(email: String): User?
+
     @Update
     suspend fun updateUser(user: User)
 

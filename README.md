@@ -29,6 +29,7 @@ Aplicación móvil para Android que permite a los usuarios descubrir y realizar 
     - Establecimiento de la navegación inicial de la aplicación.
     - Integración de elementos de Material Design para una estética moderna y funcional (iconos, tarjetas, manejo de colores).
     - Configuración inicial de la estructura del proyecto y layouts base.
+    - Implementación de la lógica de registro de usuarios e inicio de sesión utilizando base de datos local.
 
 ### 💻 Tecnologías Utilizadas:
 
