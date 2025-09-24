@@ -42,9 +42,10 @@ class LoginActivity : AppCompatActivity() {
 
             CoroutineScope(Dispatchers.IO).launch {
                 val user = userDao.getUserByEmail(email)
+                val hashedPassword = HashUtils.sha256(password)
 
                 runOnUiThread {
-                    if (user != null && user.password == password) {
+                    if (user != null && user.password == hashedPassword) {
                         Toast.makeText(this@LoginActivity, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
                         val intent = Intent(this@LoginActivity, MainActivity::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK

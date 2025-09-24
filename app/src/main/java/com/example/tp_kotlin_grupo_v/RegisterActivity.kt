@@ -74,7 +74,8 @@ class RegisterActivity : AppCompatActivity() {
                     return@launch
                 }
 
-                val newUser = User(username = username, email = email, password = password) // Assuming User has an auto-generated ID
+                val hashedPassword = HashUtils.sha256(password)
+                val newUser = User(username = username, email = email, password = hashedPassword)
                 userDao.insertUser(newUser)
 
                 runOnUiThread {
