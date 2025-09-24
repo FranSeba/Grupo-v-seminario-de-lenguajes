@@ -55,4 +55,4 @@ dependencies {
     ksp(libs.androidx.room.compiler)
 }
 
-private fun DependencyHandlerScope.ksp(compiler: Any) {}
+
