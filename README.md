@@ -16,13 +16,26 @@ Aplicación móvil para Android que permite a los usuarios descubrir y realizar 
 - **Pantallas de Autenticación:**
   - Login de usuario.
   - Registro de nuevos usuarios.
-- (Próximamente) Lista de giveaways principales.
-- (Próximamente) Detalles de un giveaway específico.
+- **Lista de giveaways principales.**
+- **Detalles de un giveaway específico.**
+- **Agregar Menú y Barra Superior.**
+- **Utilizar iconos con imágenes nativas de Android.**
+- **El manejo de Base de Datos local para almacenar los usuarios registrados.**
+- **Funcionamiento de “Recordar Usuario” con Shared Preferences.**
+- **Funcionamiento lógico del Login.**
+- **Funcionamiento lógico del Registro de personas.**
 
 ### 🛠️ Contribuciones del Equipo:
 
+- **Tomás Marcelo Pugente**:
+    - Detalles de un giveaway específico.
+    - El manejo de Base de Datos local para almacenar los usuarios registrados.
+
 - **Franco Sebastián Romay**:
     - Configuración inicial del proyecto en Android Studio.
+    - Lista de giveaways principales.
+    - Agregar menú y barra superior.
+    - Funcionamiento de "Recordar usuario" con shared preferences e integración de iconos nativos.
 
 - **Dante Zulli**:
     - Diseño e implementación de las interfaces de usuario para las pantallas de Login y Registro.
