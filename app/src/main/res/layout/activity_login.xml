@@ -75,6 +75,12 @@
                 android:padding="12dp"
                 android:layout_marginBottom="24dp"/>
 
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recordarme"
+                android:id="@+id/cbRecordar"/>
+
             <Button
                 android:id="@+id/btn_login"
                 android:layout_width="match_parent"
