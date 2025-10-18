@@ -6,7 +6,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.tp_kotlin_grupo_v.databinding.ItemGiveawayBinding
 import com.squareup.picasso.Picasso
 
-class GiveawayAdapter(private var giveaways: MutableList<GiveawayDTO>) : RecyclerView.Adapter<GiveawayAdapter.GiveawayViewHolder>() {
+class GiveawayAdapter(
+    private var giveaways: MutableList<GiveawayDTO>,
+    private val onItemClick: (GiveawayDTO) -> Unit
+) : RecyclerView.Adapter<GiveawayAdapter.GiveawayViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GiveawayViewHolder {
         val binding = ItemGiveawayBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -14,7 +17,11 @@ class GiveawayAdapter(private var giveaways: MutableList<GiveawayDTO>) : Recycle
     }
 
     override fun onBindViewHolder(holder: GiveawayViewHolder, position: Int) {
-        holder.bind(giveaways[position])
+        val giveaway = giveaways[position]
+        holder.bind(giveaway)
+        holder.itemView.setOnClickListener {
+            onItemClick(giveaway)
+        }
     }
 
     override fun getItemCount(): Int = giveaways.size

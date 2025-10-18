@@ -51,7 +51,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupRecyclerView() {
         rvGiveaways.layoutManager = LinearLayoutManager(this)
-        giveawayAdapter = GiveawayAdapter(mutableListOf())
+        giveawayAdapter = GiveawayAdapter(mutableListOf()) { giveaway ->
+            val intent = Intent(this, GiveawayDetailActivity::class.java).apply {
+                putExtra("GIVEAWAY_ID", giveaway.id)
+            }
+            startActivity(intent)
+        }
         rvGiveaways.adapter = giveawayAdapter
     }
 
