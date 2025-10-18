@@ -1,4 +1,4 @@
-package com.example.tp_kotlin_grupo_v.activities
+package com.example.tp_kotlin_grupo_v.presentation
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,11 +8,10 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.tp_kotlin_grupo_v.model.AppDatabase
-import com.example.tp_kotlin_grupo_v.HashUtils
+import com.example.tp_kotlin_grupo_v.repository.AppDatabase
+import com.example.tp_kotlin_grupo_v.util.HashUtils
 import com.example.tp_kotlin_grupo_v.R
-import com.example.tp_kotlin_grupo_v.activities.RegisterActivity
-import com.example.tp_kotlin_grupo_v.UserDao
+import com.example.tp_kotlin_grupo_v.domain.UserDao
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

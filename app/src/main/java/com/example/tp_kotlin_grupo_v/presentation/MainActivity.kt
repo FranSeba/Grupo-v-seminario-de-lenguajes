@@ -1,4 +1,4 @@
-package com.example.tp_kotlin_grupo_v.activities
+package com.example.tp_kotlin_grupo_v.presentation
 
 import android.content.Intent
 import android.os.Bundle
@@ -16,8 +16,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tp_kotlin_grupo_v.R
-import com.example.tp_kotlin_grupo_v.model.GiveawayAdapter
-import com.example.tp_kotlin_grupo_v.model.GiveawayDTO
+import com.example.tp_kotlin_grupo_v.domain.GiveawayAdapter
 import com.example.tp_kotlin_grupo_v.repository.GiveawayRetroFitClientImpl
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

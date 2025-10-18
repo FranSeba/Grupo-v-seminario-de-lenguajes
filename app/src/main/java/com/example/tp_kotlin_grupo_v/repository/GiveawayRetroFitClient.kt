@@ -1,6 +1,6 @@
 package com.example.tp_kotlin_grupo_v.repository
 
-import com.example.tp_kotlin_grupo_v.model.GiveawayDTO
+import com.example.tp_kotlin_grupo_v.domain.GiveawayDTO
 import retrofit2.http.GET
 import retrofit2.http.Query
 

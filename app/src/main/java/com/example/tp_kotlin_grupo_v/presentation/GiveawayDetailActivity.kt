@@ -1,4 +1,4 @@
-package com.example.tp_kotlin_grupo_v.activities
+package com.example.tp_kotlin_grupo_v.presentation
 
 import android.os.Bundle
 import android.widget.Button

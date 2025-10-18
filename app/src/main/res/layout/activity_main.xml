@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/app_background"
-    tools:context=".activities.MainActivity">
+    tools:context=".presentation.MainActivity">
 
     <!-- CardView para la Toolbar -->
     <include android:id="@+id/toolbar" layout="@layout/primary_toolbar" />

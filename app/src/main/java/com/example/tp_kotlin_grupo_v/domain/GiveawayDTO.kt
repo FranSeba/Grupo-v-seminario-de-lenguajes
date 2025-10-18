@@ -1,4 +1,4 @@
-package com.example.tp_kotlin_grupo_v.model
+package com.example.tp_kotlin_grupo_v.domain
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass

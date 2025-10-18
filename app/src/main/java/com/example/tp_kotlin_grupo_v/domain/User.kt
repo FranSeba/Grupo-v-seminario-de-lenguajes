@@ -1,4 +1,4 @@
-package com.example.tp_kotlin_grupo_v
+package com.example.tp_kotlin_grupo_v.domain
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -12,4 +12,3 @@ data class User(
     @ColumnInfo(name = "email") var email: String,
     @ColumnInfo(name = "password") var password: String
 )
-

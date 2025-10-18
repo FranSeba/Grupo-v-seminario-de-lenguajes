@@ -1,4 +1,4 @@
-package com.example.tp_kotlin_grupo_v
+package com.example.tp_kotlin_grupo_v.domain
 
 import androidx.room.Dao
 import androidx.room.Delete
@@ -6,14 +6,15 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
+import com.example.tp_kotlin_grupo_v.domain.User
 
 @Dao
 interface UserDao {
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.Companion.REPLACE)
     suspend fun insertUser(user: User)
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.Companion.REPLACE)
     suspend fun insertUsers(userEntities: List<User>)
 
     @Query("SELECT * FROM user_entity")
