@@ -1,4 +1,4 @@
-package com.example.tp_kotlin_grupo_v.models
+package com.example.tp_kotlin_grupo_v.model
 
 import android.content.Context
 import androidx.room.Database

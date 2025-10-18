@@ -8,7 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.tp_kotlin_grupo_v.models.AppDatabase
+import com.example.tp_kotlin_grupo_v.model.AppDatabase
 import com.example.tp_kotlin_grupo_v.HashUtils
 import com.example.tp_kotlin_grupo_v.R
 import com.example.tp_kotlin_grupo_v.activities.RegisterActivity

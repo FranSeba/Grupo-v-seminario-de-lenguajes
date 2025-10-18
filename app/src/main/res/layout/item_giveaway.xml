@@ -45,11 +45,23 @@
                 android:id="@+id/tv_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="Awesome Game Title"
+                tools:text="Lost Age Gift Code Giveaway"
                 android:textAppearance="?attr/textAppearanceListItem"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimaryText" />
+
+            <!-- Worth -->
+            <TextView
+                android:id="@+id/tv_worth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                tools:text="N/A"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorSecondaryText" />
+
 
             <!-- Descripción -->
             <TextView
@@ -57,7 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                tools:text="A short description of the giveaway."
+                tools:text="Claim your free Lost Age Gift Pack Code and unlock in-game items before they’re gone!"
                 android:maxLines="2"
                 android:ellipsize="end"
                 android:textSize="12sp"
@@ -71,14 +83,14 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_genre"
+                    android:id="@+id/tv_type"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
                     android:paddingTop="2dp"
                     android:paddingBottom="2dp"
-                    tools:text="Action"
+                    tools:text="DLC"
                     android:textSize="10sp"/>
 
                 <TextView
@@ -90,39 +102,20 @@
                     android:paddingEnd="8dp"
                     android:paddingTop="2dp"
                     android:paddingBottom="2dp"
-                    tools:text="Steam"
+                    tools:text="PC"
                     android:textSize="10sp"/>
             </LinearLayout>
 
-            <!-- Publisher y Developer -->
+             <!-- Fecha de finalizacion -->
             <TextView
-                android:id="@+id/tv_developer"
+                android:id="@+id/tv_end_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                tools:text="Developer: Indie Studio"
-                android:textSize="12sp"
-                android:textColor="@color/colorSecondaryText" />
-
-            <TextView
-                android:id="@+id/tv_publisher"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                tools:text="Publisher: Cool Games Inc."
-                android:textSize="12sp"
-                android:textColor="@color/colorSecondaryText" />
-
-             <!-- Fecha de lanzamiento -->
-            <TextView
-                android:id="@+id/tv_release_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
                 android:drawableStart="@drawable/outline_alarm_24"
                 android:drawablePadding="4dp"
                 android:gravity="center_vertical"
-                tools:text="Released: 2023-10-26"
+                tools:text="Ends: 2025-12-31"
                 android:textSize="12sp"
                 android:textColor="@color/colorSecondaryText" />
 

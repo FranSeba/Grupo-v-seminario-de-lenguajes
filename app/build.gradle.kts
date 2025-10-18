@@ -37,6 +37,9 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -57,7 +60,8 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.moshi)
     implementation(libs.moshi.kotlin)
-    annotationProcessor(libs.moshi.kotlin.codegen)
+    ksp(libs.moshi.kotlin.codegen)
     implementation(libs.converter.moshi)
+    implementation(libs.picasso)
 
 }
