@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main" 
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <include layout="@layout/secondary_toolbar" />
 
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
     <ScrollView
+        android:id="@+id/contentScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFFFFF">
+        android:layout_below="@id/toolbar_secondary"
+        android:background="#FFFFFF"
+        android:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -78,6 +88,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tvPublishedDate"
                         android:text="Publicado: 15 de enero de 2024"
                         android:textColor="#333333"
                         android:paddingBottom="6dp"
@@ -85,6 +96,7 @@
                         android:layout_width="match_parent"/>
 
                     <TextView
+                        android:id="@+id/tvEndDate"
                         android:text="Termina: 31 de diciembre de 2024"
                         android:textColor="#333333"
                         android:paddingBottom="6dp"
@@ -92,6 +104,7 @@
                         android:layout_width="match_parent"/>
 
                     <TextView
+                        android:id="@+id/tvUsers"
                         android:text="Participantes: 12,500"
                         android:textColor="#333333"
                         android:paddingBottom="6dp"
@@ -99,7 +112,17 @@
                         android:layout_width="match_parent"/>
 
                     <TextView
+                        android:id="@+id/tvPlatforms"
                         android:text="Plataformas: PC, Epic Games"
+                        android:textColor="#333333"
+                        android:paddingBottom="6dp"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvType"
+                        android:text="DLC"
                         android:textColor="#333333"
                         android:layout_height="match_parent"
                         android:layout_width="match_parent"
@@ -131,6 +154,7 @@
                         />
 
                     <TextView
+                        android:id="@+id/tvDescription"
                         android:text="Claim Rocket League for free on Epic Games Store! High-powered hybrid of arcade-style soccer and vehicular mayhem."
                         android:textColor="#333333"
                         android:layout_height="match_parent"
@@ -164,18 +188,12 @@
                         android:layout_width="match_parent"
                         />
 
-                    <TextView android:text="1. Visit Epic Games Store"
+                    <TextView
+                        android:id="@+id/tvInstructions"
+                        android:text="1. Visit Epic Games Store"
                         android:layout_height="match_parent"
                         android:layout_width="match_parent"/>
-                    <TextView android:text="2. Login to your account"
-                        android:layout_height="match_parent"
-                        android:layout_width="match_parent"/>
-                    <TextView android:text="3. Click 'Get' on Rocket League"
-                        android:layout_height="match_parent"
-                        android:layout_width="match_parent"/>
-                    <TextView android:text="4. Confirm your purchase"
-                        android:layout_height="match_parent"
-                        android:layout_width="match_parent"/>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -192,4 +210,4 @@
                 android:layout_marginBottom="20dp"/>
         </LinearLayout>
     </ScrollView>
-</LinearLayout>
+</RelativeLayout>

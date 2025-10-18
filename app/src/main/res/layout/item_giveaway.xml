@@ -17,108 +17,109 @@
         android:padding="12dp"
         android:background="@color/card_background">
 
-
         <!-- Imagen del Juego/DLC a la IZQUIERDA -->
         <ImageView
             android:id="@+id/iv_game_image"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="120dp"
+            android:layout_height="0dp"
             android:scaleType="centerCrop"
-            tools:srcCompat=""
+            tools:srcCompat="@tools:sample/backgrounds/scenic"
             android:background="@color/card_background"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:contentDescription="Imagen del juego" />
 
-        <!-- Título del Giveaway -->
-        <TextView
-            android:id="@+id/tv_nombre"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:layout_marginEnd="8dp"
-            android:text="Free Butcher"
-            android:textAppearance="?attr/textAppearanceListItem"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:maxLines="2"
-            android:ellipsize="end"
-            android:textColor="@color/colorPrimaryText"
+            android:orientation="vertical"
             app:layout_constraintStart_toEndOf="@id/iv_game_image"
-            app:layout_constraintTop_toTopOf="@id/iv_game_image"
-            app:layout_constraintEnd_toStartOf="@+id/tv_sitio"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"/>
-
-        <!-- Sitio (ej. GOG, Steam) -->
-        <TextView
-            android:id="@+id/tv_sitio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="(GOG)"
-            android:textSize="12sp"
-            android:textColor="@color/colorSecondaryText"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBaseline_toBaselineOf="@id/tv_nombre"
-            app:layout_constraintStart_toEndOf="@id/tv_nombre"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
-        <!-- Tipo (Game, DLC) -->
-        <TextView
-            android:id="@+id/tv_tipo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Game"
-            android:textSize="14sp"
-            android:textColor="@color/colorSecondaryText"
-            app:layout_constraintStart_toStartOf="@id/tv_nombre"
-            app:layout_constraintTop_toBottomOf="@id/tv_nombre" />
+            <!-- Título -->
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Lost Age Gift Code Giveaway"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryText" />
 
-        <!-- Precio -->
-        <TextView
-            android:id="@+id/tv_precio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="$9.99"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimary"
-            app:layout_constraintStart_toEndOf="@id/tv_tipo"
-            app:layout_constraintBaseline_toBaselineOf="@id/tv_tipo" />
+            <!-- Worth -->
+            <TextView
+                android:id="@+id/tv_worth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                tools:text="N/A"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorSecondaryText" />
 
-        <!-- Tiempo Restante -->
-        <TextView
-            android:id="@+id/tv_dias"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:drawableStart="@drawable/outline_alarm_24"
-            android:drawablePadding="4dp"
-            android:gravity="center_vertical"
-            android:text="5 días restantes"
-            android:textSize="12sp"
-            android:textColor="@color/colorSecondaryText"
-            app:layout_constraintStart_toStartOf="@id/tv_tipo"
-            app:layout_constraintTop_toBottomOf="@id/tv_tipo"
-            app:layout_constraintBottom_toBottomOf="@id/iv_game_image"
-            app:layout_constraintVertical_bias="1.0"/> <!-- Alinea a la parte inferior de la imagen -->
 
-        <!-- Cantidad de Participantes -->
-        <TextView
-            android:id="@+id/tv_cantidad_personas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:drawableStart="@drawable/baseline_person_24"
-            android:drawablePadding="4dp"
-            android:gravity="center_vertical"
-            android:text="4.510"
-            android:textSize="12sp"
-            android:textColor="@color/colorSecondaryText"
-            app:layout_constraintStart_toEndOf="@id/tv_dias"
-            app:layout_constraintBaseline_toBaselineOf="@id/tv_dias" />
+            <!-- Descripción -->
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                tools:text="Claim your free Lost Age Gift Pack Code and unlock in-game items before they’re gone!"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textSize="12sp"
+                android:textColor="@color/colorSecondaryText" />
+
+            <!-- Chips para Género y Plataforma -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    tools:text="DLC"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/tv_platform"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    tools:text="PC"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+             <!-- Fecha de finalizacion -->
+            <TextView
+                android:id="@+id/tv_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/outline_alarm_24"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                tools:text="Ends: 2025-12-31"
+                android:textSize="12sp"
+                android:textColor="@color/colorSecondaryText" />
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
