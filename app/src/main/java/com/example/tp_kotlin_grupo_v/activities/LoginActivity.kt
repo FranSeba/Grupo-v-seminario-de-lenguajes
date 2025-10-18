@@ -1,13 +1,18 @@
-package com.example.tp_kotlin_grupo_v
+package com.example.tp_kotlin_grupo_v.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.example.tp_kotlin_grupo_v.models.AppDatabase
+import com.example.tp_kotlin_grupo_v.HashUtils
+import com.example.tp_kotlin_grupo_v.R
+import com.example.tp_kotlin_grupo_v.activities.RegisterActivity
+import com.example.tp_kotlin_grupo_v.UserDao
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -21,7 +26,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        userDao = AppDatabase.getDatabase(applicationContext).userDao()
+        userDao = AppDatabase.Companion.getDatabase(applicationContext).userDao()
 
         val tvRegister = findViewById<TextView>(R.id.tv_register)
         tvRegister.setOnClickListener {

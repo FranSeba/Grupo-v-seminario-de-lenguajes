@@ -1,4 +1,4 @@
-package com.example.tp_kotlin_grupo_v
+package com.example.tp_kotlin_grupo_v.activities
 
 import android.os.Bundle
 import android.widget.Button
@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.tp_kotlin_grupo_v.R
 import com.google.android.material.appbar.MaterialToolbar
 
 class GiveawayDetailActivity : AppCompatActivity() {

@@ -1,9 +1,11 @@
-package com.example.tp_kotlin_grupo_v
+package com.example.tp_kotlin_grupo_v.models
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.tp_kotlin_grupo_v.User
+import com.example.tp_kotlin_grupo_v.UserDao
 
 @Database(version=1,entities = [User::class] )
 abstract class AppDatabase: RoomDatabase() {

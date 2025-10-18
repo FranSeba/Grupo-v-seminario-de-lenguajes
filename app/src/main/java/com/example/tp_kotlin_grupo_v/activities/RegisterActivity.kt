@@ -1,13 +1,18 @@
-package com.example.tp_kotlin_grupo_v
+package com.example.tp_kotlin_grupo_v.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.example.tp_kotlin_grupo_v.models.AppDatabase
+import com.example.tp_kotlin_grupo_v.HashUtils
+import com.example.tp_kotlin_grupo_v.R
+import com.example.tp_kotlin_grupo_v.User
+import com.example.tp_kotlin_grupo_v.UserDao
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -19,7 +24,7 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        userDao = AppDatabase.getDatabase(applicationContext).userDao()
+        userDao = AppDatabase.Companion.getDatabase(applicationContext).userDao()
 
         val backArrow = findViewById<ImageView>(R.id.register_back_arrow)
         backArrow.setOnClickListener {
