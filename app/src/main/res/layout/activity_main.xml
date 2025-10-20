@@ -9,8 +9,9 @@
     android:background="@color/app_background"
     tools:context=".presentation.MainActivity">
 
-    <!-- CardView para la Toolbar -->
-    <include android:id="@+id/toolbar" layout="@layout/primary_toolbar" />
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/primary_toolbar" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -44,6 +45,7 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="@color/colorPrimaryText"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -52,7 +54,6 @@
                     android:textColor="@color/colorSecondaryText"/>
             </LinearLayout>
 
-            <!-- Esta semana -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -68,6 +69,7 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="@color/colorPrimaryText"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -76,7 +78,6 @@
                     android:textColor="@color/colorSecondaryText"/>
             </LinearLayout>
 
-            <!-- Valor total -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -92,6 +93,7 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="@color/colorPrimaryText"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -102,7 +104,7 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- Titulo de lista de activos y Cantidad disponible -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -128,35 +130,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="0 disponibles"
-            android:textSize="12sp"
-            android:textColor="@color/colorOnPrimary"
             android:background="@color/disponible_background"
+            android:gravity="center"
             android:paddingTop="2dp"
             android:paddingBottom="2dp"
-            android:gravity="center"/>
+            android:text="0 disponibles"
+            android:textColor="#37474F"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
     </LinearLayout>
 
-    <!-- Loading State -->
-    <TextView
-        android:id="@+id/tv_loading"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cargando..."
-        android:gravity="center"
-        android:textSize="16sp"
-        android:visibility="gone"
-        android:padding="16dp"/>
 
-    <!-- Lista de activos -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_giveaways"
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_giveaway" />
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
 
 </LinearLayout>
