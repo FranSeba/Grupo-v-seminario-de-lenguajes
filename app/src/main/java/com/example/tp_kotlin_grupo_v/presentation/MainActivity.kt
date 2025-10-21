@@ -50,8 +50,15 @@ class MainActivity : AppCompatActivity(), ListaFragment.OnGiveawaysUpdatedListen
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.action_logout) {
+            val preferencias = getSharedPreferences(resources.getString(R.string.sp_credenciales), MODE_PRIVATE)
+            val editor = preferencias.edit()
+            editor.clear()
+            editor.apply()
+
             val intent = Intent(this, LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
+            finish()
         }
         return super.onOptionsItemSelected(item)
     }

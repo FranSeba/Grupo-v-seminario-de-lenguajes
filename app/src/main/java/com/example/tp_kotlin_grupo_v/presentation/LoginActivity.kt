@@ -78,13 +78,15 @@ class LoginActivity : AppCompatActivity() {
 
                 runOnUiThread {
                     if (user != null && user.password == hashedPassword) {
+                        val editor = preferencias.edit()
                         if (cbRecordar.isChecked) {
-                            val editor = preferencias.edit()
                             editor.putString(resources.getString(R.string.email), email)
                             editor.putString(resources.getString(R.string.password), password)
-                            editor.apply()
                             showNotification()
+                        } else {
+                            editor.clear()
                         }
+                        editor.apply()
 
                         Toast.makeText(this@LoginActivity, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
                         val intent = Intent(this@LoginActivity, MainActivity::class.java)
