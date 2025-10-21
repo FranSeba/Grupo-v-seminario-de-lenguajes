@@ -24,18 +24,24 @@ Aplicación móvil para Android que permite a los usuarios descubrir y realizar 
 - **Funcionamiento de “Recordar Usuario” con Shared Preferences.**
 - **Funcionamiento lógico del Login.**
 - **Funcionamiento lógico del Registro de personas.**
+- **Agregar llamado a API Rest elegida.**
+- **Realizar el llamado en un hilo de ejecución distinto.**
+- **Incorporar el uso de Fragmentos en alguna de las pantallas.**
+- **Generar una notificación cuando se activa la opción de Recordar Usuario.**
 
 ### 🛠️ Contribuciones del Equipo:
 
 - **Tomás Marcelo Pugente**:
     - Detalles de un giveaway específico.
     - El manejo de Base de Datos local para almacenar los usuarios registrados.
+    - Incorporar fragmentos en la lista de giveaways.
 
 - **Franco Sebastián Romay**:
     - Configuración inicial del proyecto en Android Studio.
     - Lista de giveaways principales.
     - Agregar menú y barra superior.
     - Funcionamiento de "Recordar usuario" con shared preferences e integración de iconos nativos.
+    - Generar una notificacion cuando se activa la opcion de Recordar Usuario.
 
 - **Dante Zulli**:
     - Diseño e implementación de las interfaces de usuario para las pantallas de Login y Registro.
@@ -43,6 +49,8 @@ Aplicación móvil para Android que permite a los usuarios descubrir y realizar 
     - Integración de elementos de Material Design para una estética moderna y funcional (iconos, tarjetas, manejo de colores).
     - Configuración inicial de la estructura del proyecto y layouts base.
     - Implementación de la lógica de registro de usuarios e inicio de sesión utilizando base de datos local.
+    - Agregar llamado a la API Rest.
+    - Realizar el llamado en un hilo de ejecucion distinto.
 
 ### 💻 Tecnologías Utilizadas:
 
