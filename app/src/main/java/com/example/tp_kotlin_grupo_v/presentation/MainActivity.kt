@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -12,9 +13,10 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.tp_kotlin_grupo_v.R
 import com.example.tp_kotlin_grupo_v.presentation.ui.lista.ListaFragment
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), ListaFragment.OnGiveawaysUpdatedListener {
 
     private lateinit var toolbar: Toolbar
+    private lateinit var tvAvailableBadge: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.title = resources.getString(R.string.toolbar_titulo)
 
+        tvAvailableBadge = findViewById(R.id.tv_available_badge)
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
@@ -51,5 +54,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onGiveawaysUpdated(count: Int) {
+        tvAvailableBadge.text = "$count disponibles"
     }
 }

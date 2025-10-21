@@ -1,5 +1,6 @@
 package com.example.tp_kotlin_grupo_v.presentation.ui.lista
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -24,6 +25,20 @@ class ListaFragment : Fragment() {
     private lateinit var rvGiveaways: RecyclerView
     private lateinit var giveawayAdapter: GiveawayAdapter
     private lateinit var tvLoading: TextView
+    private var listener: OnGiveawaysUpdatedListener? = null
+
+    interface OnGiveawaysUpdatedListener {
+        fun onGiveawaysUpdated(count: Int)
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is OnGiveawaysUpdatedListener) {
+            listener = context
+        } else {
+            throw RuntimeException("$context must implement OnGiveawaysUpdatedListener")
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -60,6 +75,7 @@ class ListaFragment : Fragment() {
                     GiveawayRetroFitClientImpl.client.getGiveaways()
                 }
                 giveawayAdapter.updateGiveaways(giveaways)
+                listener?.onGiveawaysUpdated(giveaways.size)
             } catch (e: Exception) {
                 Log.e("ListaFragment", "Error fetching giveaways", e)
             } finally {
@@ -71,5 +87,10 @@ class ListaFragment : Fragment() {
     private fun showLoading(isLoading: Boolean) {
         tvLoading.visibility = if (isLoading) View.VISIBLE else View.GONE
         rvGiveaways.visibility = if (isLoading) View.GONE else View.VISIBLE
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        listener = null
     }
 }
